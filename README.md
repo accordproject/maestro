@@ -1,2 +1,2 @@
 # maestro
-Tools and Samples for Hyperledger Fabric
+Migration Utility for Hyperledger Composer Business Network Archives
