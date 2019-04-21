@@ -22,6 +22,8 @@
     "dependencies": {
         "composer-common": "^0.20.8",
         "composer-concerto": "^0.70.2",
-        "composer-concerto-tools": "^0.60.2"
+        "composer-concerto-tools": "^0.60.2",
+        "js-beautify": "^1.9.1",
+        "nunjucks": "^3.2.0"
     }
 }

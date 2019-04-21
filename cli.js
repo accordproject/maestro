@@ -21,17 +21,12 @@ const Commands = require('./lib/commands');
 require('yargs')
     .scriptName('cli')
     .usage('$0 <cmd> [args]')
-    .command('generate', 'generate code from Composer Business Network Archives', (yargs) => {
+    .command('migrate', 'migrate a Composer Business Network Archives', (yargs) => {
 
         yargs.option('bnaPath', {
             describe: 'path to a business network archive',
             type: 'string',
             default: '.'
-        });
-        yargs.option('format', {
-            describe: 'format of the code to generate',
-            type: 'string',
-            default: 'JSONSchema'
         });
         yargs.option('outputDirectory', {
             describe: 'output directory path',
@@ -40,10 +35,10 @@ require('yargs')
         });
     }, (argv) => {
         if (argv.verbose) {
-            console.log(`generate code in from the business network archive ${argv.bnaPath} into directory ${argv.outputDirectory}`);
+            console.log(`migrate a business network archive ${argv.bnaPath} to directory ${argv.outputDirectory}`);
         }
 
-        return Commands.generate(argv.bnaPath, argv.outputDirectory)
+        return Commands.migrate(argv.bnaPath, argv.outputDirectory)
             .then((result) => {
                 console.log(result);
             })

@@ -1,0 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+'use strict';
+
+const ComposerContract = require('./ComposerContract');
+
+class {{contractName}} extends ComposerContract {
+
+    async instantiate(ctx) {
+        super.instantiate(ctx);
+    }
+
+    {% for function in functions %}
+        {{function}}
+    {% endfor %}
+
+}
+
+module.exports = {{contractName}};
